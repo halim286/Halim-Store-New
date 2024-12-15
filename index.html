@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halim Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.HCf8PVgmI_ThXNoPxOzEUwHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+            animation: slide-in 2s ease-out;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            width: 250px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .product-details h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-details p {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-details button {
+            background-color: #222;
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .product-details button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 1rem;
+            background-color: #25D366;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #1da851;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Halim Store</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Wellcome</h1>
+    </section>
+
+    <section id="products" class="product-container">
+        <div class="product">
+            <img src="https://lh3.googleusercontent.com/fife/ALs6j_EQV6mBIYBaoTv5IK_wmyiZqrS-UYb4jeVTBHM60qlqJ-xfpN-YAcwkyvPLctLqpcjzsUSdJH-Hd-p9HjcNCloWPyOqCdUNisI1HuyDZIcGoou0PJsgqC3by7lTm6kRwrLyB365FEHwJitDX3vaD29eqzBnI3h1gVi4M6OGZoMAf2x1gNufNfK5DftVJIzYaHRDBC6oUQWC580BVikAA-9-QPlZYXMpIh-Q7dGveLTOzPw-2YCgq50FLOcDL9c6t1q8Kry0oHqayeQlVyNBFLWAb3nXNhB0HzJpWrIz8-rkoWmApFRzg5shI7ZrVYalhetffG-Xthsq_k5pI12cY58YVjxdAQSts30LPqDqJUXMIS2KDTiRK3VB2VTIpznRsL6OQC6R6yzDayQabSIpsHPDGRlJR-ch5BRElcSGg-R_uNvYLkHSySS0i81Dybq7TXZfNswKJpwpIIsW7HX9TquVGhPEonaiJNW6UPbfzy_Gjndz3s7Tu0pS5nSdf9AidyZvfx8ekNwEYnDHjeTQ86nTHYP8TAxcM-Ank9VuO2eXDSWcSXRVEetubVFScjCNHywBtzziL_2ajB6vbBrXKGC9myggVrYd4_o-qrkAHPLVpPyqsofiLXSUhHRQVcsVdHhoevFBMV-0t8OkvleAFlvCqsfZPEcweyJ2MQZBivDmaCBJnpJCYE78skrY4z3blaScowfUrplheDJ3yF2cNqvshmWibmq3nCoDxGVNJd9Wnof6sz2Y9dhGeVfQ5vdWdHB1DcRrAwCbgkXN5_uBgTllW7CCAq7dy7aJQ23_EzwDJrevj-nykNL7d9mI_7i3iI8vNUiIhvbT9QTk_GBKHpGWAPXOVVpEAjIe--ZNUoiXyWnQ7hHZ6TaZWZHdE_b6Jh-yFZjdUyFmqMHzFegxDwyRVkfZja-YXcZOmOtgBv9CCq4m_mLOwq8W9-qtRQtiV6KEtBrORv_hgKZTvmCV-TRf4EKupNjEW6F9HMHUJzSczxSmU2fjvZIfXtwQIwQgt3PNg-d3WOUfPa4OIBBqt8apCGj1ReFxge1JjexaShB7_HTxwJOo3UV_PDfmOXjrBw_uragDq2AXZGnIa2G-p_0Yrsoy13bLTGuSZgzs3iL_C4hP7MR0d9YmHcvTZjrmGlmBIfRzXe-7YQOk-l7Evoj7dpFvIGWDcsAY7uyutIwVxoYg5tGFxXXljkgenvK8gaeToltxLyK2C776s9sxpgvSZCTE1e2s9jwgh1kohHbqkAlHrTsKRaJ2qIP3KJQlG_rzH7CemcssNe1_IbjEF0HZ38E-em7Tjw7Phj-TCes4mm-hFt23tPKEKH2K-A9lh-gmAM9VUmHoxaM9xPbgLwZjiB4gwqraT4FVDKZ6ybvU3RihgDXHkRtX1qUjljrfvyFk7w=s1024" alt="Shoe 1">
+            <div class="product-details">
+                <h2>PANGSIT</h2>
+                <p>Isi : 3 | 10.000</p>
+                <button onclick="location.href='payment.html'">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://lh3.googleusercontent.com/fife/ALs6j_EQV6mBIYBaoTv5IK_wmyiZqrS-UYb4jeVTBHM60qlqJ-xfpN-YAcwkyvPLctLqpcjzsUSdJH-Hd-p9HjcNCloWPyOqCdUNisI1HuyDZIcGoou0PJsgqC3by7lTm6kRwrLyB365FEHwJitDX3vaD29eqzBnI3h1gVi4M6OGZoMAf2x1gNufNfK5DftVJIzYaHRDBC6oUQWC580BVikAA-9-QPlZYXMpIh-Q7dGveLTOzPw-2YCgq50FLOcDL9c6t1q8Kry0oHqayeQlVyNBFLWAb3nXNhB0HzJpWrIz8-rkoWmApFRzg5shI7ZrVYalhetffG-Xthsq_k5pI12cY58YVjxdAQSts30LPqDqJUXMIS2KDTiRK3VB2VTIpznRsL6OQC6R6yzDayQabSIpsHPDGRlJR-ch5BRElcSGg-R_uNvYLkHSySS0i81Dybq7TXZfNswKJpwpIIsW7HX9TquVGhPEonaiJNW6UPbfzy_Gjndz3s7Tu0pS5nSdf9AidyZvfx8ekNwEYnDHjeTQ86nTHYP8TAxcM-Ank9VuO2eXDSWcSXRVEetubVFScjCNHywBtzziL_2ajB6vbBrXKGC9myggVrYd4_o-qrkAHPLVpPyqsofiLXSUhHRQVcsVdHhoevFBMV-0t8OkvleAFlvCqsfZPEcweyJ2MQZBivDmaCBJnpJCYE78skrY4z3blaScowfUrplheDJ3yF2cNqvshmWibmq3nCoDxGVNJd9Wnof6sz2Y9dhGeVfQ5vdWdHB1DcRrAwCbgkXN5_uBgTllW7CCAq7dy7aJQ23_EzwDJrevj-nykNL7d9mI_7i3iI8vNUiIhvbT9QTk_GBKHpGWAPXOVVpEAjIe--ZNUoiXyWnQ7hHZ6TaZWZHdE_b6Jh-yFZjdUyFmqMHzFegxDwyRVkfZja-YXcZOmOtgBv9CCq4m_mLOwq8W9-qtRQtiV6KEtBrORv_hgKZTvmCV-TRf4EKupNjEW6F9HMHUJzSczxSmU2fjvZIfXtwQIwQgt3PNg-d3WOUfPa4OIBBqt8apCGj1ReFxge1JjexaShB7_HTxwJOo3UV_PDfmOXjrBw_uragDq2AXZGnIa2G-p_0Yrsoy13bLTGuSZgzs3iL_C4hP7MR0d9YmHcvTZjrmGlmBIfRzXe-7YQOk-l7Evoj7dpFvIGWDcsAY7uyutIwVxoYg5tGFxXXljkgenvK8gaeToltxLyK2C776s9sxpgvSZCTE1e2s9jwgh1kohHbqkAlHrTsKRaJ2qIP3KJQlG_rzH7CemcssNe1_IbjEF0HZ38E-em7Tjw7Phj-TCes4mm-hFt23tPKEKH2K-A9lh-gmAM9VUmHoxaM9xPbgLwZjiB4gwqraT4FVDKZ6ybvU3RihgDXHkRtX1qUjljrfvyFk7w=s1024" alt="Shoe 2">
+            <div class="product-details">
+                <h2>PANGSIT</h2>
+                <p>Isi : 4 | 12.000</p>
+                <button onclick="location.href='payment.html'">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://lh3.googleusercontent.com/fife/ALs6j_EQV6mBIYBaoTv5IK_wmyiZqrS-UYb4jeVTBHM60qlqJ-xfpN-YAcwkyvPLctLqpcjzsUSdJH-Hd-p9HjcNCloWPyOqCdUNisI1HuyDZIcGoou0PJsgqC3by7lTm6kRwrLyB365FEHwJitDX3vaD29eqzBnI3h1gVi4M6OGZoMAf2x1gNufNfK5DftVJIzYaHRDBC6oUQWC580BVikAA-9-QPlZYXMpIh-Q7dGveLTOzPw-2YCgq50FLOcDL9c6t1q8Kry0oHqayeQlVyNBFLWAb3nXNhB0HzJpWrIz8-rkoWmApFRzg5shI7ZrVYalhetffG-Xthsq_k5pI12cY58YVjxdAQSts30LPqDqJUXMIS2KDTiRK3VB2VTIpznRsL6OQC6R6yzDayQabSIpsHPDGRlJR-ch5BRElcSGg-R_uNvYLkHSySS0i81Dybq7TXZfNswKJpwpIIsW7HX9TquVGhPEonaiJNW6UPbfzy_Gjndz3s7Tu0pS5nSdf9AidyZvfx8ekNwEYnDHjeTQ86nTHYP8TAxcM-Ank9VuO2eXDSWcSXRVEetubVFScjCNHywBtzziL_2ajB6vbBrXKGC9myggVrYd4_o-qrkAHPLVpPyqsofiLXSUhHRQVcsVdHhoevFBMV-0t8OkvleAFlvCqsfZPEcweyJ2MQZBivDmaCBJnpJCYE78skrY4z3blaScowfUrplheDJ3yF2cNqvshmWibmq3nCoDxGVNJd9Wnof6sz2Y9dhGeVfQ5vdWdHB1DcRrAwCbgkXN5_uBgTllW7CCAq7dy7aJQ23_EzwDJrevj-nykNL7d9mI_7i3iI8vNUiIhvbT9QTk_GBKHpGWAPXOVVpEAjIe--ZNUoiXyWnQ7hHZ6TaZWZHdE_b6Jh-yFZjdUyFmqMHzFegxDwyRVkfZja-YXcZOmOtgBv9CCq4m_mLOwq8W9-qtRQtiV6KEtBrORv_hgKZTvmCV-TRf4EKupNjEW6F9HMHUJzSczxSmU2fjvZIfXtwQIwQgt3PNg-d3WOUfPa4OIBBqt8apCGj1ReFxge1JjexaShB7_HTxwJOo3UV_PDfmOXjrBw_uragDq2AXZGnIa2G-p_0Yrsoy13bLTGuSZgzs3iL_C4hP7MR0d9YmHcvTZjrmGlmBIfRzXe-7YQOk-l7Evoj7dpFvIGWDcsAY7uyutIwVxoYg5tGFxXXljkgenvK8gaeToltxLyK2C776s9sxpgvSZCTE1e2s9jwgh1kohHbqkAlHrTsKRaJ2qIP3KJQlG_rzH7CemcssNe1_IbjEF0HZ38E-em7Tjw7Phj-TCes4mm-hFt23tPKEKH2K-A9lh-gmAM9VUmHoxaM9xPbgLwZjiB4gwqraT4FVDKZ6ybvU3RihgDXHkRtX1qUjljrfvyFk7w=s1024" alt="Shoe 3">
+            <div class="product-details">
+                <h2>PANGSIT</h2>
+                <p>Isi : 5 | 15.000</p>
+                <button onclick="location.href='payment.html'">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; padding: 2rem;">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us on WhatsApp!</p>
+        <a class="contact-button" href="https://wa.me/62895320004955?text=Hello%20Shoe%20Paradise!%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank">Contact Us on WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Halim Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<script>
+    async function payWithDana() {
+    // Ambil data dari form
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const amount = 10000; // Jumlah pembayaran tetap (contoh)
+    const ewallet = 'dana';
+    const phoneNumber = '0895320004955';
+
+    // Validasi: Pastikan data form lengkap
+    if (!name || !address) {
+        alert('Harap isi nama dan alamat.');
+        return;
+    }
+
+    try {
+        // Kirim data ke server
+        const response = await fetch('http://localhost:3000/pay-dana', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, address, amount, ewallet, phoneNumber }),
+        });
+
+        const data = await response.json();
+
+        // Tangani respons dari server
+        if (response.ok) {
+            alert(data.message); // Tampilkan pesan sukses
+            window.location.href = 'index.html'; // Redirect ke halaman utama
+        } else {
+            alert(`Pembayaran gagal: ${data.message}`); // Tampilkan pesan gagal
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan saat memproses pembayaran.');
+    }
+}
+
+</script>
